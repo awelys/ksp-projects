@@ -7,4 +7,3 @@ while random_number != entered_number:
     entered_number = int(input())
     attempts += 1
 print(f'Ура! Вы отгадали число за {attempts} попыток!')
-print("Let'go")
