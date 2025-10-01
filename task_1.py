@@ -1,4 +1,5 @@
 import random
+
 random_number = random.randint(1, 20)
 entered_number = 0
 attempts = 0

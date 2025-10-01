@@ -1,7 +1,6 @@
 import string
 
 def caesar_cipher(text, shift):
-    """Функция для шифра Цезаря"""
     result = []
     for ch in text:
         if ch.isalpha():
@@ -48,12 +47,12 @@ def encrypt(text, k, m):
     encrypted_text = " ".join(caesar_words)
     print("Зашифрованная строка:", encrypted_text)
 
-    # 7. Словарь символов
+    # 7. Сначала берем уникальные символы и потом преобразовываем в словарь
     unique_chars = list(dict.fromkeys(encrypted_text))
     char_to_num = {ch: str(100 + i) for i, ch in enumerate(unique_chars)}
     print("Словарь символов:", char_to_num)
 
-    # 8. Преобразуем строку в числа
+    # 8. Преобразовываем строку в числа
     number_text = "".join(char_to_num[ch] for ch in encrypted_text)
     print("Строка в виде чисел:", number_text)
 
