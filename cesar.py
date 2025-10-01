@@ -101,13 +101,9 @@ def decrypt(number_text, char_to_num, k, m):
     print("Расшифрованная строка:", original_text)
     return original_text
 
-
-# ===== Пример запуска =====
-
+# Запуск программы
 text = "I need Help!"
 k = 1
 m = 2
-
 encrypted_text, number_text, dictionary = encrypt(text, k, m)
-print("\n--- Теперь расшифровка ---")
 decrypted_text = decrypt(number_text, dictionary, k, m)
