@@ -1,8 +1,6 @@
 import random
 import time
 
-# --- Функции для генерации лабиринта ---
-
 def create_initial_grid(width, height):
     grid = [[empty_char for _ in range(width)] for _ in range(height)]
 
@@ -22,7 +20,7 @@ def display_maze(grid, step_count, wall_info=""):
     for row in grid:
         print(" ".join(row))
     print("\n")
-    time.sleep(delay)
+   # time.sleep(delay)
 
 
 def recursive_division(grid, x, y, width, height, step_counter):
@@ -77,7 +75,8 @@ def recursive_division(grid, x, y, width, height, step_counter):
                 grid[wall_y][i] = wall_char
 
         step_counter[0] += 1
-        display_maze(grid, step_counter[0])
+        wall_info = f"Горизонтальная стена: y={wall_y}, проход: x={passage_x}"
+        display_maze(grid, step_counter[0], wall_info)
 
         # верхняя под-область
         recursive_division(grid, x, y, width, wall_y - y, step_counter)
@@ -89,9 +88,9 @@ if __name__ == "__main__":
     maze_width = 27
     maze_height = 15
 
-    wall_char = '█'
+    wall_char = '#'
     empty_char = ' '
-    delay = 0.1
+    delay = 0.5
 
     maze = create_initial_grid(maze_width, maze_height)
 
