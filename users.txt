@@ -1,0 +1,2 @@
+{'lastname': 'Иванов', 'firstname': 'Иван', 'telephone': '+79991234567', 'address': 'Москва', 'position': 'инженер', 'salary': '50000'}
+{'lastname': 'Петров', 'firstname': 'Петр', 'telephone': '+79997654321', 'address': 'Казань', 'order': 'auto-order-001'}
